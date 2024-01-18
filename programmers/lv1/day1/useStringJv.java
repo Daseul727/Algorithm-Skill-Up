@@ -1,6 +1,6 @@
 package programmers.lv1.day1;
 
-public class useString {
+public class useStringJv {
 
     /*
      문자열 다루기 기본
@@ -8,7 +8,7 @@ public class useString {
      예를 들어 s가 "a234"이면 False를 리턴하고 "1234"라면 True를 리턴하면 됩니다.
      */
 
-    public boolean solution(String s) {
+    public boolean solution (String s) {
         long result;
 
         try {
