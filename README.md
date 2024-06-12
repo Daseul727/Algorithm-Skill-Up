@@ -80,3 +80,34 @@
   Arrays.sort(arr);
   return arr[arr.length/2]
   ```
+- 최빈값 구하기 (최빈값이 1개 이상이면 return -1)
+  ```java
+  public int solution(int[] array) {
+        //최빈값의 count
+        int maxCount = 0;
+
+        //result 값
+        int answer = 0;
+
+        //숫자 & 숫자 횟수 저장할 map
+        Map<Integer, Integer> map = new HashMap<>();
+  
+        for (int number : array) {
+
+            //map 에 number 와 횟수를 저장, number 가 map에 없는경우 0을 저장하고, map에 있다면 횟수+1
+            int count = map.getOrDefault(number, 0) + 1;
+
+            //만약 현재의 횟수가 maxCount 보다 높으면 maxcount를 교체, answer에 숫자 입력
+            if (count > maxCount) {
+                maxCount = count;
+                answer = number;
+            } else  if (count == maxCount) {
+                //count와 maxCount 가 같다면 최빈값이 여러개이므로 -1
+                answer = -1;
+            }
+            map.put(number, count);
+        }
+        return answer;
+    }
+  ```
+  
