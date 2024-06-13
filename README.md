@@ -110,4 +110,15 @@
         return answer;
     }
   ```
-  
+- 짝수 오름차순 정렬
+  - IntStream, LongStream 모두 range/rangeClosed 를 쓸수있음.
+  - range : 마지막값 포함x
+  - ragneClosed : 마지막값 포함
+  ```java
+  return IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
+  ```
+- 피자 나눠먹기
+  - 7조각피자를 n명이서 나눠먹으려면 몇개의 피자?
+  ```java
+  return (n%7==0) ? n/7 : n/7 + 1;
+  ```
