@@ -2,7 +2,7 @@ package programmers.Hash;
 
 import java.util.HashMap;
 
-public class marathon {
+public class Marathon {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
 
