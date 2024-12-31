@@ -31,6 +31,14 @@
   Integer.ParseInt(s);
   ```
 
+### Math
+
+- 비교하여 작은것
+  ```java
+  // return count <= map.size()? count:map.size();
+  return Math.min(count, map.size());
+  ```
+
 ### Problme Type
 - 홀짝
   ```java
